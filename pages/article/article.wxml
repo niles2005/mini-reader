@@ -1,0 +1,50 @@
+<view class='main'>
+  <scroll-view scroll-y class='article' style='height:{{pageHeight - 110}}px'>
+    <span class="article-title">{{file.title}}</span>
+    <span class="article-author">{{file.author}}</span>
+
+    <view wx:for="{{file.content}}" wx:key="index"   class="article-content {{file.type}}">
+      <text decode="true">
+          {{item}}
+      </text>
+</view>
+    <text decode="true" space="true" class='article-text' >
+
+</text>
+  </scroll-view>
+
+
+</view>
+
+
+
+<view style='position:absolute;bottom:10px;width:750rpx'>
+  <view class='audioControls'>
+    <view wx:if="{{recordState <= 1}}" style="display:flex;justify-content:center;color:black;" >
+    <span class="time" style="display:block;tex-align:center;font-size:20px;">{{timeLabel1}}</span>
+      
+    </view>
+    <view wx:if="{{recordState > 1}}" style="display:flex;justify-content:center;">
+      <view class='slider'>
+        <slider bindchange='sliderChange' activeColor='red' block-size="12" value='{{sliderRate}}' />
+      </view>
+      <view class='time'>
+        {{timeLabel1}}/{{timeLabel2}}
+      </view>
+    </view>
+
+
+  </view>
+  <view style='display:flex;justify-content:center;'>
+    <button wx:if="{{recordState>= 2}}" class="record-button" bindtap='repeatRecord'>
+      重录
+    </button>
+
+    <button class="record-button" bindtap='doRecord'>
+      <image src="record{{recordState}}.png" class="record-image" ></image>
+    </button>
+
+    <button wx:if="{{recordState>= 2}}" class="record-button" bindtap='uploadRecord'>上传</button>
+
+  </view>
+</view>

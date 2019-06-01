@@ -1,0 +1,13 @@
+<view style='    display: flex;    flex-direction: row;    flex-grow: 1;    overflow: hidden;'>
+  <scroll-view scroll-y style='width:40%;height:{{pageHeight}}px;'>
+    <view wx:for="{{list}}" wx:key="index" bindtap='selectGroup' id="{{index}}" class="group-list group-{{selectIndex==index}}">
+      <span>{{item.type}}</span>
+    </view>
+  </scroll-view>
+
+  <scroll-view scroll-y style='height:{{pageHeight}}px;'>
+    <view wx:for="{{list[selectIndex].files}}" wx:key="name" bindtap='selectArticle' id="{{item.name}}" class="article-list article-{{article==item.name}}">
+      <span>{{item.label}}</span>
+    </view>
+  </scroll-view>
+</view>

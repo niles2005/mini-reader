@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/article/article"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ebf5ff",
+    "navigationBarTitleText": "小小读者",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

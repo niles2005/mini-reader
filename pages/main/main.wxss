@@ -1,0 +1,21 @@
+.group-list {
+  line-height: 30px;
+  height: 30px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.group-true {
+  color: cadetblue;
+}
+
+.article-list {
+  line-height: 20px;
+  height: 20px;
+  padding: 10px;
+  font-size: 16px;  
+}
+
+.article-true {
+  color: green;
+}

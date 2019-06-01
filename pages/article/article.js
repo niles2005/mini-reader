@@ -201,7 +201,7 @@ Page({
     });
   },
   uploadRecord() { //上传
-
+    showMessage("上传功能未实现！")
   },
 
   sliderChange(e) {
